@@ -1,0 +1,76 @@
+<?php $__env->startSection('content'); ?>
+    
+<!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <?php echo $__env->make('Admin.common.message', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> 
+    <section class="content-header">
+      <h1>
+        <?php echo $view_title; ?>
+
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i> <?php echo trans('members/common.members'); ?></a></li>
+        <li><a href="#"><?php echo trans('members/base_country.base_country'); ?></a></li>
+        <li class="active"><?php echo e($action); ?></li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+      <section class="content">
+        <div class="row">
+          <div class="col-xs-12">
+            <!-- Horizontal Form -->
+            <div class="box box-info">
+              <?php if($action=='Edit' || $action=='View'): ?>
+                <?php echo Form::model($BaseCountrys,['method' => 'PATCH','files'=> true,'class'=>'form-horizontal','route'=>['admin.members.base_country.update',$BaseCountrys->id]]); ?>
+
+              <?php else: ?>
+                <?php echo Form::open(['url' => 'admin/members/base_country','files'=> true,'class'=>'form-horizontal']); ?>
+
+              <?php endif; ?>
+
+                <div class="with-border box-header">
+                 <h3 class="box-title"><?php echo $view_title; ?> <small><?php echo e($action); ?></small></h3>
+                 <div class="pull-right">
+                   <span>
+                    <?php if($action=='Edit' || $action=='Create'): ?>
+                     <button class="btn btn-success" type="submit">
+                        <i class="fa fa-wa fa-save"></i> <?php echo trans('common.save'); ?> 
+                     </button> &nbsp;&nbsp; 
+                     <?php endif; ?>
+                     <a class="btn btn-default" href ="<?php echo e(url('admin/members/base_country')); ?>">
+                        <i class="fa fa-wa fa-reply"></i> <?php echo trans('common.back_to_listing'); ?> 
+                     </a> 
+                   </span>
+                  </div>
+                </div><!-- /.box-header -->
+                <!-- form start -->
+                
+                 <?php echo $__env->make('Admin.common.error_input', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                <div class="box-body">
+                  
+                    <div class="form-group">
+                      <label  class="col-sm-4 control-label"><?php echo trans('members/base_country.base_country'); ?> <span class="validate_label_red">*</span></label>
+                      <div class="col-sm-4">
+                        <?php echo Form::text('name',null,['class'=>'form-control','placeholder'=>'Base Country Name']); ?>
+
+                      </div>
+                    </div>
+                    
+                </div><!-- /.box-body -->
+                
+              <?php echo Form::close(); ?>
+
+            </form>
+            </div><!-- /.box -->
+          
+          </div>
+        </div><!-- /.row -->
+      </section><!-- /.content -->
+  </div><!-- /.content-wrapper -->
+
+<?php $__env->stopSection(); ?>
+<!-- <?php echo $__env->make('Admin.common.fancybox', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> -->
+
+<?php echo $__env->make('Admin.common.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

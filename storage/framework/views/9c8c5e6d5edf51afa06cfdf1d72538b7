@@ -1,0 +1,46 @@
+ <div class="header padding-top padding-bottom-lg wow fadeInUp"><!--header-->
+	<div class="container">	
+		<div class="row">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span style="color:#fff !important;" class="sr-only" sty>Toggle navigation</span>
+						<span style="color:#fff !important;" class="icon-bar"></span>
+						<span style="color:#fff !important;" class="icon-bar"></span>
+						<span style="color:#fff !important;" class="icon-bar"></span>
+					</button>
+					<h1 class="navbar-brand hidden-lg hidden-sm hidden-md"><a style="color:#1b317d;" href="<?php echo e(url('')); ?>"><b><?php echo COMPANY; ?></b></a></h1>
+				</div>
+				<!--navbar-header-->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<?php $getMenus = Helpers::getMenu();?>
+
+						<?php foreach($getMenus as $getMenu): ?>
+							<?php if($getMenu['child_Menu']!=null): ?>
+								<li><a href="<?php echo $getMenu['url']; ?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $getMenu['name']; ?><span class="caret"></span></a>
+									<ul class="dropdown-menu">
+								<?php foreach($getMenu['child_Menu'] as $child_Menu): ?>
+									<?php if($child_Menu['url']!=null): ?>
+										<li><a class="hvr-bounce-to-bottom" href="<?php echo $child_Menu['url']; ?>"><?php echo $child_Menu['name']; ?></a></li>
+									<?php else: ?>
+										<li><a class="hvr-bounce-to-bottom" href="<?php echo e(url('home/category')); ?>?id=<?php echo $child_Menu['id']; ?>"><?php echo $child_Menu['name']; ?></a></li>
+									<?php endif; ?>
+								<?php endforeach; ?>    
+									</ul>
+								</li>
+							<?php else: ?>
+								<?php if($getMenu['url']!=null): ?>
+									<li class="active"><a href="<?php echo $getMenu['url']; ?>"><?php echo $getMenu['name']; ?></a></li>
+								<?php else: ?>
+									<li class="active"><a href="<?php echo e(url('home/category')); ?>?id=<?php echo $getMenu['id']; ?>"><?php echo $getMenu['name']; ?></a></li>
+								<?php endif; ?>
+							<?php endif; ?>
+						<?php endforeach; ?>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>	
+			</nav>
+		</div>	
+	</div>
+</div>

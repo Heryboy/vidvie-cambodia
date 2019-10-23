@@ -1,0 +1,17 @@
+#pageup {
+	position: fixed;
+	right: 20px;
+	bottom: 30px;
+	width: 48px;
+	height: 48px;
+	background-image: url(../../images/up.png);
+	/*background-image: url('../../image/up.png');*/
+	background-repeat: no-repeat;
+	background-size: 48px 48px;
+	display: none;
+	cursor: pointer;
+	opacity: 0.8;
+	z-index: 100;
+}
+
+#pageup:hover{opacity: 1;}

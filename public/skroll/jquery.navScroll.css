@@ -1,0 +1,100 @@
+/* The style below is made as an example, it's not part of the plugin but you can use it if you like :) */
+
+* {
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
+}
+
+section {
+  /*width: 100%;
+  height: 100%;
+  padding-top: 156px;
+  padding-left: 30px;*/
+}
+
+.navMain {
+  width: 100%;
+  height: 50px;
+  /*position: fixed;*/
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4);
+  padding-left: 20px;
+  background-color: white;
+}
+
+.navMain ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.navMain li {
+  display: inline-block;
+  text-align: left;
+  font-weight: bold;
+  height: 50px;
+  line-height: 50px;
+}
+
+.navMain li a {
+  display: block;
+  padding: 0 40px;
+}
+
+.nav li a.active {
+  background-color: #27677c;
+  color: #FFF;
+}
+
+.nav-mobile {
+  display: none;
+  font-weight: bold;
+  width: 100%;
+}
+
+#section1 {background-color: #D1D1D1;}
+#section2 {background-color: #DFDFDF;}
+#section3 {background-color: #C7C7C7;}
+
+.click-me {
+  width: 150px;
+  height: 30px;
+  background: #435AB8;
+  color: white;
+  text-align: center;
+  line-height: 30px;
+}
+
+.click-me a {
+  display: block;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .navMain ul {
+    display: none;
+    background-color: white;
+    margin-left: -30px;
+  }
+  .navMain li {
+    width: 100%;
+  }
+
+  .navMain li a {
+    padding: 0 30px;
+  }
+
+  .nav-mobile {
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: 769px) {
+  .navMain ul {
+    display: block !important;
+  }
+}
