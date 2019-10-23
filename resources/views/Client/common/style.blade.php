@@ -1,5 +1,21 @@
-<link rel="stylesheet" href="{{url('lib/plugins/css/font-awesome.min.css')}}">
-<link rel="stylesheet" href="{{url('assets/front_end/css/front_end/css/style.css')}}">
+<!-- Google font -->
+<link href="https://fonts.googleapis.com/css?family=Hind:400,700" rel="stylesheet">
+
+<!-- Bootstrap -->
+<link type="text/css" rel="stylesheet" href="{{url('assets/front_end/vidvie-plugin/css/bootstrap.min.css')}}" />
+<!-- Slick -->
+<link type="text/css" rel="stylesheet" href="{{url('assets/front_end/vidvie-plugin/css/slick.css')}}" />
+<link type="text/css" rel="stylesheet" href="{{url('assets/front_end/vidvie-plugin/css/slick-theme.css')}}" />
+
+
+<!-- nouislider -->
+<!-- <link type="text/css" rel="stylesheet" href="css/nouislider.min.css" /> -->
+
+<!-- Font Awesome Icon -->
+<link rel="stylesheet" href="{{url('assets/front_end/vidvie-plugin/css/font-awesome.min.css')}}">
+
+<!-- Custom stlylesheet -->
+<link type="text/css" rel="stylesheet" href="{{url('assets/front_end/vidvie-plugin/css/style.css')}}" />
 <!-- //Custom Theme files -->
 	<!--[if lt IE 8]>
 	   <div style=' clear: both; text-align:center; position: relative;'>
@@ -14,13 +30,5 @@
 	<![endif]-->
 <!-- custom -->
 <!-- Custom Theme files -->
-<link href="{{url('assets/front_end/css/boostrap/bootstrap.min.css')}}" type="text/css" rel="stylesheet" media="all">
-<link href="{{url('assets/front_end/css/style.css')}}" type="text/css" rel="stylesheet" media="all">
-<!-- custom -->
-<link rel="stylesheet" type="text/css" href="{{url('css/custome.css')}}">
-<!-- menu -->
-<link rel="stylesheet" href="{{url('assets/front_end/css/menu.css')}}">
-<!-- carousel -->
-
-<link rel="stylesheet" href="{{url('assets/front_end/carousel/css/templatemo-misc.css')}}">
-<link rel="stylesheet" href="{{url('assets/front_end/carousel/css/templatemo-style.css')}}">
+<link href="{{url('assets/front_end/vidvie-plugin/css/boostrap/bootstrap.min.css')}}" type="text/css" rel="stylesheet" media="all">
+<link href="{{url('assets/front_end/vidvie-plugin/css/style.css')}}" type="text/css" rel="stylesheet" media="all">

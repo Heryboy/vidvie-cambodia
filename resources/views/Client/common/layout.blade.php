@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>TBCC Cambodia</title>
+<title>VIDVIE Cambodia</title>
 <!-- Tell the browser to be responsive to screen width -->
 <!-- <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"name="viewport"> -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,12 +14,16 @@
 @include('Client.common.style')
 <script type="text/javascript" src="{{url('js/jquery-1.9.1.min.js')}}"></script>
 </head>
+<!-- Loading First Page -->
+	<!-- <div id="overlay">
+		<div class="cv-spinner">
+			<span class="spinner"></span>
+		</div>
+	</div> -->
 	<body>
-		<?php 
-			$getInformatoin=Helpers::getInformatoin();
-		?>
+		
 		<!-- =========== logo ==============-->
-		@include('Client.common.logo')
+		<!-- include('Client.common.logo') -->
 		<!-- =========== end logo ===========-->
 		<!-- bar -->
 		@include('Client.common.menu')
@@ -36,7 +40,7 @@
 		<!-- end footer -->
 
 		<!-- srcipt -->
-		<!-- include('Client.common.script') -->
+		@include('Client.common.script')
 		<!-- end script -->
 		
 	</body>

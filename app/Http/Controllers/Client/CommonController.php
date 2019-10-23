@@ -124,7 +124,7 @@ class CommonController extends Controller
         $mainMenu = $this->getFMenuLists($language_id,2,0);
         $footerMenu = $this->getFMenuLists($language_id,3,0);
 
-        return view('Client.contact')->with('languages',$languages)
+        return view('Client.contact_us')->with('languages',$languages)
                                       ->with('topMenu',$topMenu)
                                       ->with('mainMenu',$mainMenu)
                                       ->with('footerMenu',$footerMenu);

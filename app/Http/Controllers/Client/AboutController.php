@@ -21,6 +21,9 @@ class AboutController extends Controller
 {
 
   //current_members 
+  public function index(){  
+    return view('Client.about_us');
+  }
   public function committee(){
   	$committee = Committee::OrderBy('order_level','ASC')->get();
     return view('Client.about.committee')

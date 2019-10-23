@@ -110,20 +110,24 @@
 		//########Useful Information
 		Route::get('useful_information/{id}/{name}/', 'Client\UsefulInformationController@useful_information');
 		//########Client Side
+		// Block VidVie
 		Route::get('home/category', 'Client\CommonController@category');
 		Route::get('/', 'Client\CommonController@index');
-		Route::get('/home', 'Client\CommonController@index');
-		//promotion
-		Route::get('promotion', 'Client\CommonController@Promotion');
-		//contact
-		Route::get('contact', 'Client\CommonController@contact');
+		Route::get('/home', 'Client\CommonController@index');						
+		Route::get('contact_us', 'Client\CommonController@contact');		
+		Route::get('about_us', 'Client\AboutController@index');
+		Route::get('sign_up_dealer', 'Client\SignUpDealerController@index');
+		Route::get('products', 'Client\ProductsController@product');
+		Route::get('find_locations', 'Client\FindLocationController@find_location');
+		Route::get('product_details', 'Client\ProductsController@product_detail');
+		// End-Block VidVie
+
+
 
 		Route::get('how_to_be_our_member', 'Client\CommonController@how_to_be_our_member');
 		Route::get('background', 'Client\CommonController@background');
 		Route::get('committee', 'Client\CommonController@committee');
 
-		// about 
-		Route::get('about/committee', 'Client\AboutController@committee');
 		// members
 		Route::get('members/current_members', 'Client\MemberController@current_members');
 		Route::get('members/current_members/{id}/{name}', 'Client\MemberController@member_detail');
