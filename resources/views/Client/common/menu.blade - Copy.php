@@ -1,5 +1,4 @@
-<!-- HEADER -->
-<header>
+ 
 		<!-- top Header -->
 		<div id="top-header">
 			<div class="container">
@@ -8,7 +7,7 @@
 				</div>
 				<div class="pull-right">
 					<ul class="header-top-links">
-						<li><a href="<?php echo e(url('sign_up_dealer')); ?>">Sign up dealer</a></li>
+						<li><a href="{{url('sign_up_dealer')}}">Sign up dealer</a></li>
 					</ul>
 				</div>
 			</div>
@@ -21,8 +20,8 @@
 				<div class="pull-left">
 					<!-- Logo -->
 					<div class="header-logo">
-						<a class="logo" href="<?php echo e(url('/')); ?>">
-							<img src="<?php echo e(url('assets/front_end/vidvie-plugin/img/logo.jpg')); ?>" alt="">
+						<a class="logo" href="{{url('/')}}">
+							<img src="{{url('assets/front_end/vidvie-plugin/img/logo.jpg')}}" alt="">
 						</a>
 					</div>
 					<!-- /Logo -->
@@ -79,7 +78,7 @@
 					<span class="menu-header">Menu <i class="fa fa-bars"></i></span>
 					<ul class="menu-list">
 						<li><a href="#">Home</a></li>
-						<li><a href="<?php echo e(url('find_locations')); ?>">Find location</a></li>
+						<li><a href="{{url('find_locations')}}">Find location</a></li>
 						<li class="dropdown mega-dropdown"><a class="dropdown-toggle" data-toggle="dropdown"
 								aria-expanded="true">Category <i class="fa fa-caret-down"></i></a>
 							<div class="custom-menu">
@@ -89,11 +88,11 @@
 											<li>
 												<h3 class="list-links-title">Vidvie Cambodia</h3>
 											</li>
-											<li><a href="<?php echo e(url('products')); ?>">Wireless</a></li>
-											<li><a href="<?php echo e(url('products')); ?>">Charger</a></li>
-											<li><a href="<?php echo e(url('products')); ?>">Phones & Accessories</a></li>
-											<li><a href="<?php echo e(url('products')); ?>">Jewelry & Watches</a></li>
-											<li><a href="<?php echo e(url('products')); ?>">Bags & Shoes</a></li>
+											<li><a href="{{url('products')}}">Wireless</a></li>
+											<li><a href="{{url('products')}}">Charger</a></li>
+											<li><a href="{{url('products')}}">Phones & Accessories</a></li>
+											<li><a href="{{url('products')}}">Jewelry & Watches</a></li>
+											<li><a href="{{url('products')}}">Bags & Shoes</a></li>
 										</ul>
 										<hr class="hidden-md hidden-lg">
 									</div>
@@ -102,11 +101,11 @@
 											<li>
 												<h3 class="list-links-title">Vidvie Global</h3>
 											</li>
-											<li><a href="<?php echo e(url('products')); ?>">Wireless</a></li>
-											<li><a href="<?php echo e(url('products')); ?>">Charger</a></li>
-											<li><a href="<?php echo e(url('products')); ?>">Phones & Accessories</a></li>
-											<li><a href="<?php echo e(url('products')); ?>">Jewelry & Watches</a></li>
-											<li><a href="<?php echo e(url('products')); ?>">Bags & Shoes</a></li>
+											<li><a href="{{url('products')}}">Wireless</a></li>
+											<li><a href="{{url('products')}}">Charger</a></li>
+											<li><a href="{{url('products')}}">Phones & Accessories</a></li>
+											<li><a href="{{url('products')}}">Jewelry & Watches</a></li>
+											<li><a href="{{url('products')}}">Bags & Shoes</a></li>
 										</ul>
 										<hr class="hidden-md hidden-lg">
 									</div>
@@ -115,19 +114,19 @@
 											<li>
 												<h3 class="list-links-title">Categories</h3>
 											</li>
-											<li><a href="<?php echo e(url('products')); ?>">Women’s Clothing</a></li>
-											<li><a href="<?php echo e(url('products')); ?>">Men’s Clothing</a></li>
-											<li><a href="<?php echo e(url('products')); ?>">Phones & Accessories</a></li>
-											<li><a href="<?php echo e(url('products')); ?>">Jewelry & Watches</a></li>
-											<li><a href="<?php echo e(url('products')); ?>">Bags & Shoes</a></li>
+											<li><a href="{{url('products')}}">Women’s Clothing</a></li>
+											<li><a href="{{url('products')}}">Men’s Clothing</a></li>
+											<li><a href="{{url('products')}}">Phones & Accessories</a></li>
+											<li><a href="{{url('products')}}">Jewelry & Watches</a></li>
+											<li><a href="{{url('products')}}">Bags & Shoes</a></li>
 										</ul>
 									</div>
 								</div>
 								<div class="row hidden-sm hidden-xs">
 									<div class="col-md-12">
 										<hr>
-										<a class="banner banner-1" href="<?php echo e(url('products')); ?>">
-											<img src="<?php echo e(url('assets/front_end/vidvie-plugin/img/banner05.jpg')); ?>" alt="">
+										<a class="banner banner-1" href="{{url('products')}}">
+											<img src="{{url('assets/front_end/vidvie-plugin/img/banner05.jpg')}}" alt="">
 											<div class="banner-caption text-center">
 												<h2 class="white-color">NEW COLLECTION</h2>
 												<h3 class="white-color font-weak">HOT DEAL</h3>
@@ -146,11 +145,11 @@
 											<li>
 												<h3 class="list-links-title">Categories</h3>
 											</li>
-											<li><a href="<?php echo e(url('products')); ?>">Women’s Clothing</a></li>
-											<li><a href="<?php echo e(url('products')); ?>">Men’s Clothing</a></li>
-											<li><a href="<?php echo e(url('products')); ?>">Phones & Accessories</a></li>
-											<li><a href="<?php echo e(url('products')); ?>">Jewelry & Watches</a></li>
-											<li><a href="<?php echo e(url('products')); ?>">Bags & Shoes</a></li>
+											<li><a href="{{url('products')}}">Women’s Clothing</a></li>
+											<li><a href="{{url('products')}}">Men’s Clothing</a></li>
+											<li><a href="{{url('products')}}">Phones & Accessories</a></li>
+											<li><a href="{{url('products')}}">Jewelry & Watches</a></li>
+											<li><a href="{{url('products')}}">Bags & Shoes</a></li>
 										</ul>
 										<hr class="hidden-md hidden-lg">
 									</div>
@@ -159,11 +158,11 @@
 											<li>
 												<h3 class="list-links-title">Categories</h3>
 											</li>
-											<li><a href="<?php echo e(url('products')); ?>">Women’s Clothing</a></li>
-											<li><a href="<?php echo e(url('products')); ?>">Men’s Clothing</a></li>
-											<li><a href="<?php echo e(url('products')); ?>">Phones & Accessories</a></li>
-											<li><a href="<?php echo e(url('products')); ?>">Jewelry & Watches</a></li>
-											<li><a href="<?php echo e(url('products')); ?>">Bags & Shoes</a></li>
+											<li><a href="{{url('products')}}">Women’s Clothing</a></li>
+											<li><a href="{{url('products')}}">Men’s Clothing</a></li>
+											<li><a href="{{url('products')}}">Phones & Accessories</a></li>
+											<li><a href="{{url('products')}}">Jewelry & Watches</a></li>
+											<li><a href="{{url('products')}}">Bags & Shoes</a></li>
 										</ul>
 										<hr class="hidden-md hidden-lg">
 									</div>
@@ -184,7 +183,7 @@
 									<div class="col-md-12">
 										<hr>
 										<a class="banner banner-1" href="#">
-											<img src="<?php echo e(url('assets/front_end/vidvie-plugin/img/banner05.jpg')); ?>" alt="">
+											<img src="{{url('assets/front_end/vidvie-plugin/img/banner05.jpg')}}" alt="">
 											<div class="banner-caption text-center">
 												<h2 class="white-color">NEW COLLECTION</h2>
 												<h3 class="white-color font-weak">HOT DEAL</h3>
@@ -258,7 +257,7 @@
 									<div class="col-md-3">
 										<div class="hidden-sm hidden-xs">
 											<a class="banner banner-1" href="#">
-												<img src="<?php echo e(url('assets/front_end/vidvie-plugin/img/banner06.jpg')); ?>" alt="">
+												<img src="{{url('assets/front_end/vidvie-plugin/img/banner06.jpg')}}" alt="">
 												<div class="banner-caption text-center">
 													<h3 class="white-color text-uppercase">Women’s</h3>
 												</div>
@@ -279,7 +278,7 @@
 									<div class="col-md-3">
 										<div class="hidden-sm hidden-xs">
 											<a class="banner banner-1" href="#">
-												<img src="<?php echo e(url('assets/front_end/vidvie-plugin/img/banner07.jpg')); ?>" alt="">
+												<img src="{{url('assets/front_end/vidvie-plugin/img/banner07.jpg')}}" alt="">
 												<div class="banner-caption text-center">
 													<h3 class="white-color text-uppercase">Men’s</h3>
 												</div>
@@ -300,7 +299,7 @@
 									<div class="col-md-3">
 										<div class="hidden-sm hidden-xs">
 											<a class="banner banner-1" href="#">
-												<img src="<?php echo e(url('assets/front_end/vidvie-plugin/img/banner08.jpg')); ?>" alt="">
+												<img src="{{url('assets/front_end/vidvie-plugin/img/banner08.jpg')}}" alt="">
 												<div class="banner-caption text-center">
 													<h3 class="white-color text-uppercase">Accessories</h3>
 												</div>
@@ -321,7 +320,7 @@
 									<div class="col-md-3">
 										<div class="hidden-sm hidden-xs">
 											<a class="banner banner-1" href="#">
-												<img src="<?php echo e(url('assets/front_end/vidvie-plugin/img/banner09.jpg')); ?>" alt="">
+												<img src="{{url('assets/front_end/vidvie-plugin/img/banner09.jpg')}}" alt="">
 												<div class="banner-caption text-center">
 													<h3 class="white-color text-uppercase">Bags</h3>
 												</div>
@@ -342,8 +341,8 @@
 								</div>
 							</div>
 						</li>
-						<li><a href="<?php echo e(url('about_us')); ?>">About Us</a></li>
-						<li><a  href="<?php echo e(url('contact_us')); ?>">Contact Us</a></li>
+						<li><a href="{{url('about_us')}}">About Us</a></li>
+						<li><a  href="{{url('contact_us')}}">Contact Us</a></li>
 					</ul>
 				</div>
 				<!-- menu nav -->

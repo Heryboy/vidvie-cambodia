@@ -42,14 +42,14 @@
 							</div>
 						</div>
 						<div class="pull-right">
-							<div class="page-filter">
+							<!-- <div class="page-filter">
 								<span class="text-uppercase">Show:</span>
 								<select class="input">
 									<option value="0">10</option>
 									<option value="1">20</option>
 									<option value="2">30</option>
 								</select>
-							</div>
+							</div> -->
 							<ul class="store-pages">
 								<li><span class="text-uppercase">Page:</span></li>
 								<li class="active">1</li>
@@ -66,365 +66,41 @@
 						<!-- row -->
 						<div class="row">
 							<!-- Product Single -->
+							@foreach($getProducts as $p)
 							<div class="col-md-3 col-sm-6 col-xs-6">
 								<div class="product product-single">
-									<a href="{{url('product_details')}}">
-										<div class="product-thumb">
-											<div class="product-label">
-												<span>New</span>
-											</div>
-											<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
+									<div class="product-thumb">
+										@if($p->discount!=null)
+										<div class="product-label">
+											<span>New</span>
+											<span class="sale">-20%</span>
 										</div>
-										<div class="product-body">
-											<h3 class="product-price">$32.50</h3>
-											<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-											<div class="product-btns">
-												<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>
+										@else 
+										<div class="product-label">
+											<span>New</span>
+										</div>
+										@endif
+										<img src="{{url($p->image)}}" alt="">
+									</div>
+									<div class="product-body">
+										<h3 class="product-price">
+											${{$p->price}} 
+											@if($p->discount!=null)<del class="product-old-price">${{$p->new_price}} </del>@endif
+										</h3>
+										<h2 class="product-name"><a href="#">{{$p->name}}</a></h2>
+										<div class="product-btns">
+											<a href="{{url('product_details')}}?product_id={{$p->product_id}}">
+												<button class="primary-btn add-to-cart">
+													<i class="fa fa-shopping-cart"></i>
 													View detail
 												</button>
-											</div>
-										</div>
-									</a>
-								</div>
-							</div>
-							<!-- /Product Single -->
-
-							<!-- Product Single -->
-							<div class="col-md-3 col-sm-6 col-xs-6">
-								<div class="product product-single">
-									<a href="{{url('product_details')}}">
-										<div class="product-thumb">
-											<div class="product-label">
-												<span>New</span>
-											</div>
-											<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
-										</div>
-										<div class="product-body">
-											<h3 class="product-price">$32.50</h3>
-											<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-											<div class="product-btns">
-												<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>
-													View detail
-												</button>
-											</div>
-										</div>
-									</a>
-								</div>
-							</div>
-							<!-- /Product Single -->
-
-							<div class="clearfix visible-sm visible-xs"></div>
-
-							<!-- Product Single -->
-							<div class="col-md-3 col-sm-6 col-xs-6">
-								<div class="product product-single">
-									<a href="{{url('product_details')}}">
-										<div class="product-thumb">
-											<div class="product-label">
-												<span>New</span>
-											</div>
-											<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
-										</div>
-										<div class="product-body">
-											<h3 class="product-price">$32.50</h3>
-											<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-											<div class="product-btns">
-												<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>
-													View detail
-												</button>
-											</div>
-										</div>
-									</a>
-								</div>
-							</div>
-							<!-- /Product Single -->
-
-							<div class="clearfix visible-md"></div>
-
-							<!-- Product Single -->
-							<div class="col-md-3 col-sm-6 col-xs-6">
-								<div class="product product-single">
-									<a href="{{url('product_details')}}">
-										<div class="product-thumb">
-											<div class="product-label">
-												<span>New</span>
-											</div>
-											<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
-										</div>
-										<div class="product-body">
-											<h3 class="product-price">$32.50</h3>
-											<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-											<div class="product-btns">
-												<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>
-													View detail
-												</button>
-											</div>
-										</div>
-									</a>
-								</div>
-							</div>
-							<!-- /Product Single -->
-
-							<!-- <div class="clearfix visible-sm visible-xs"></div> -->
-
-							<!-- Product Single -->
-							<div class="col-md-3 col-sm-6 col-xs-6">
-								<div class="product product-single">
-									<div class="product-thumb">
-										<div class="product-label">
-											<span>New</span>
-										</div>
-										<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
-									</div>
-									<div class="product-body">
-										<h3 class="product-price">$32.50</h3>
-										<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-										<div class="product-btns">
-											<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>
-												View detail</button>
+											</a>
 										</div>
 									</div>
 								</div>
 							</div>
-							<!-- /Product Single -->
-
-							<!-- Product Single -->
-							<div class="col-md-3 col-sm-6 col-xs-6">
-								<div class="product product-single">
-									<div class="product-thumb">
-										<div class="product-label">
-											<span>New</span>
-											<span class="sale">-20%</span>
-										</div>
-										<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
-									</div>
-									<div class="product-body">
-										<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del>
-										</h3>
-										<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-										<div class="product-btns">
-											<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>
-												View detail</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- /Product Single -->
-
-							<!-- <div class="clearfix visible-md visible-lg visible-sm visible-xs"></div> -->
-
-							<!-- Product Single -->
-							<div class="col-md-3 col-sm-6 col-xs-6">
-								<div class="product product-single">
-									<div class="product-thumb">
-										<div class="product-label">
-											<span>New</span>
-											<span class="sale">-20%</span>
-										</div>
-										<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
-									</div>
-									<div class="product-body">
-										<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del>
-										</h3>
-										<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-										<div class="product-btns">
-											<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>
-												View detail</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- /Product Single -->
-
-							<!-- Product Single -->
-							<div class="col-md-3 col-sm-6 col-xs-6">
-								<div class="product product-single">
-									<div class="product-thumb">
-										<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
-									</div>
-									<div class="product-body">
-										<h3 class="product-price">$32.50</h3>
-										<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-										<div class="product-btns">
-											<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>
-												View detail</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- /Product Single -->
-
-							<!-- <div class="clearfix visible-sm visible-xs"></div> -->
-
-							<!-- Product Single -->
-							<div class="col-md-3 col-sm-6 col-xs-6">
-								<div class="product product-single">
-									<div class="product-thumb">
-										<div class="product-label">
-											<span class="sale">-20%</span>
-										</div>
-										<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
-									</div>
-									<div class="product-body">
-										<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del>
-										</h3>
-										<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-										<div class="product-btns">
-											<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>
-												View detail</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- /Product Single -->
-
-							<!-- Product Single -->
-							<div class="col-md-3 col-sm-6 col-xs-6">
-								<div class="product product-single">
-									<div class="product-thumb">
-										<div class="product-label">
-											<span>New</span>
-											<span class="sale">-20%</span>
-										</div>
-										<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
-									</div>
-									<div class="product-body">
-										<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del>
-										</h3>
-										<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-										<div class="product-btns">
-											<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>
-												View detail</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- /Product Single -->
-
-							<!-- <div class="clearfix visible-md visible-lg visible-sm visible-xs"></div> -->
-
-							<!-- Product Single -->
-							<div class="col-md-3 col-sm-6 col-xs-6">
-								<div class="product product-single">
-									<div class="product-thumb">
-										<div class="product-label">
-											<span>New</span>
-											<span class="sale">-20%</span>
-										</div>
-										<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
-									</div>
-									<div class="product-body">
-										<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del>
-										</h3>
-										<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-										<div class="product-btns">
-											<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>
-												View detail</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- /Product Single -->
-
-							<!-- Product Single -->
-							<div class="col-md-3 col-sm-6 col-xs-6">
-								<div class="product product-single">
-									<div class="product-thumb">
-										<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
-									</div>
-									<div class="product-body">
-										<h3 class="product-price">$32.50</h3>
-										<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-										<div class="product-btns">
-											<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>
-												View detail</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- /Product Single -->
-							<!-- Product Single -->
-							<div class="col-md-3 col-sm-6 col-xs-6">
-								<div class="product product-single">
-									<div class="product-thumb">
-										<div class="product-label">
-											<span>New</span>
-											<span class="sale">-20%</span>
-										</div>
-										<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
-									</div>
-									<div class="product-body">
-										<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del>
-										</h3>
-										<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-										<div class="product-btns">
-											<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>
-												View detail</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- /Product Single -->
-
-							<!-- <div class="clearfix visible-md visible-lg visible-sm visible-xs"></div> -->
-
-							<!-- Product Single -->
-							<div class="col-md-3 col-sm-6 col-xs-6">
-								<div class="product product-single">
-									<div class="product-thumb">
-										<div class="product-label">
-											<span>New</span>
-											<span class="sale">-20%</span>
-										</div>
-										<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
-									</div>
-									<div class="product-body">
-										<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del>
-										</h3>
-										<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-										<div class="product-btns">
-											<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>
-												View detail</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- /Product Single -->
-
-							<!-- Product Single -->
-							<div class="col-md-3 col-sm-6 col-xs-6">
-								<div class="product product-single">
-									<div class="product-thumb">
-										<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
-									</div>
-									<div class="product-body">
-										<h3 class="product-price">$32.50</h3>
-										<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-										<div class="product-btns">
-											<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>
-												View detail</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- /Product Single -->
-							<!-- Product Single -->
-							<div class="col-md-3 col-sm-6 col-xs-6">
-								<div class="product product-single">
-									<div class="product-thumb">
-										<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
-									</div>
-									<div class="product-body">
-										<h3 class="product-price">$32.50</h3>
-										<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-										<div class="product-btns">
-											<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>
-												View detail</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- /Product Single -->
+							@endforeach
+							<!-- /Product Single -->							
 
 						</div>
 						<!-- /row -->
@@ -444,14 +120,14 @@
 							</div>
 						</div>
 						<div class="pull-right">
-							<div class="page-filter">
+							<!-- <div class="page-filter">
 								<span class="text-uppercase">Show:</span>
 								<select class="input">
 									<option value="0">10</option>
 									<option value="1">20</option>
 									<option value="2">30</option>
 								</select>
-							</div>
+							</div> -->
 							<ul class="store-pages">
 								<li><span class="text-uppercase">Page:</span></li>
 								<li class="active">1</li>

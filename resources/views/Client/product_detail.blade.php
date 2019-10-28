@@ -9,8 +9,12 @@
 			<ul class="breadcrumb">
 				<li><a href="#">Home</a></li>
 				<li><a href="#">Products</a></li>
-				<li><a href="#">Category</a></li>
-				<li class="active">Product Name Goes Here</li>
+				<li>
+					@if($get_bread_crumb_arr)
+					<a href="{!! $get_bread_crumb_arr[0]['url_link'] !!}?id={{$get_bread_crumb_arr[0]['fmenu_id']}}">{{$get_bread_crumb_arr[0]['category_name']}}</a>
+					@endif
+				</li>
+				<li class="active">{{$get_product_arr[0]['product_name']}}</li>
 			</ul>
 		</div>
 	</div>
@@ -27,54 +31,40 @@
 				<div class="product product-details clearfix">
 					<div class="col-md-6">
 						<div id="product-main-view">
+						     @foreach($getProductImage as $image)
 							<div class="product-view">
-								<img src="{{url('assets/front_end/vidvie-plugin/img/product-detail-image/main-product01.jpg')}}" alt="">
+								<img src="{{url('')}}/{{$image->image}}" alt="no">
 							</div>
-							<div class="product-view">
-								<img src="{{url('assets/front_end/vidvie-plugin/img/product-detail-image/main-product02.jpg')}}" alt="">
-							</div>
-							<div class="product-view">
-								<img src="{{url('assets/front_end/vidvie-plugin/img/product-detail-image/main-product01.jpg')}}" alt="">
-							</div>
-							<div class="product-view">
-								<img src="{{url('assets/front_end/vidvie-plugin/img/product-detail-image/main-product02.jpg')}}" alt="">
-							</div>
+							@endforeach							
 						</div>
 						<div id="product-view">
+							@foreach($getProductImage as $thumnail_image)
 							<div class="product-view">
-								<img src="{{url('assets/front_end/vidvie-plugin/img/product-detail-image/product-detail-thumnail/main-product-thumb01.jpg')}}"
+								<img src="{{url('')}}/{{$thumnail_image->thumnail_image}}"
 									alt="">
 							</div>
-							<div class="product-view">
-								<img src="{{url('assets/front_end/vidvie-plugin/img/product-detail-image/product-detail-thumnail/main-product-thumb02.jpg')}}"
-									alt="">
-							</div>
-							<div class="product-view">
-								<img src="{{url('assets/front_end/vidvie-plugin/img/product-detail-image/product-detail-thumnail/main-product-thumb01.jpg')}}"
-									alt="">
-							</div>
-							<div class="product-view">
-								<img src="{{url('assets/front_end/vidvie-plugin/img/product-detail-image/product-detail-thumnail/main-product-thumb02.jpg')}}"
-									alt="">
-							</div>
+							@endforeach		
+							
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="product-body">
+							
+						 	@if($get_product_arr[0]['product_discount']!=null)
 							<div class="product-label">
-								<span>New</span>
-								<span class="sale">-20%</span>
+								<span>{{$get_product_arr[0]['product_status']}}</span>
+								<span class="sale">-{{$get_product_arr[0]['product_discount']}}%</span>
 							</div>
-							<h2 class="product-name">Product Name Goes Here</h2>
-							<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
-							<p><strong>Availability:</strong> In Stock</p>
+							@endif
+							<h2 class="product-name">{{$get_product_arr[0]['product_name']}}</h2>
+							@if($get_product_arr[0]['product_discount']!=null)
+							<h3 class="product-price">${{$get_product_arr[0]['product_new_price']}} <del class="product-old-price">${{$get_product_arr[0]['product_price']}}</del></h3>
+							@else
+							<h3 class="product-price">${{$get_product_arr[0]['product_price']}}</h3>
+							@endif
+							<p><strong>Availability:</strong> <span class="btn-success padding-2"> {{$get_product_arr[0]['product_status']}} </span></p>
 							<p><strong>Brand:</strong> E-SHOP</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-								exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-								dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-								Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-								mollit anim id est laborum.</p>
+							<p>{{$get_product_arr[0]['product_description']}}</p>
 						</div>
 					</div>
 					<div class="col-md-12">
@@ -86,13 +76,7 @@
 							</ul>
 							<div class="tab-content">
 								<div id="tab1" class="tab-pane fade in active">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-										incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-										nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-										Duis aute
-										irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-										nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-										qui officia deserunt mollit anim id est laborum.</p>
+									<p>{{$get_product_arr[0]['product_description']}}</p>
 								</div>
 								<div id="tab2" class="tab-pane fade in">
 									<div class="table-responsive">

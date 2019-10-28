@@ -763,6 +763,16 @@ p.card-text {
   font-size: 46px;
   text-transform: uppercase;
 }
+/*----------------------------*\
+	product detail
+\*----------------------------*/
+span.btn-success.padding-2 {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+/*----------------------------*\
+	\end product detail
+\*----------------------------*/
 
 /*----------------------------*\
 	Single product

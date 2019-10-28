@@ -1,6 +1,6 @@
- 
+@extends('Client.common.layout') 
 
-<?php $__env->startSection('content'); ?>
+@section('content')
 
 	<!-- section -->
 	<div class="wrapper-banner-product">
@@ -10,7 +10,7 @@
 			<div class="row">
 				<!-- banner -->
 				<div class="col-md-12 col-sm-12">
-					<img src="<?php echo e(url('assets/front_end/vidvie-plugin/img/image-product-detail.jpg')); ?>" alt="no" class="img-responsive" width="100%" />
+					<img src="{{url('assets/front_end/vidvie-plugin/img/image-product-detail.jpg')}}" alt="no" class="img-responsive" width="100%" />
 				</div>
 				<!-- /banner -->
 			</div>
@@ -68,40 +68,48 @@
 							<!-- Product Single -->
 							<div class="col-md-3 col-sm-6 col-xs-6">
 								<div class="product product-single">
-									<div class="product-thumb">
-										<div class="product-label">
-											<span>New</span>
-											<span class="sale">-20%</span>
+									<a href="{{url('product_details')}}">
+										<div class="product-thumb">
+											<div class="product-label">
+												<span>New</span>
+											</div>
+											<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
 										</div>
-										<img src="<?php echo e(url('assets/front_end/vidvie-plugin/img/single-product.jpg')); ?>" alt="">
-									</div>
-									<div class="product-body">
-										<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del>
-										</h3>
-										<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-										<div class="product-btns">
-											<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>
-												View detail</button>
+										<div class="product-body">
+											<h3 class="product-price">$32.50</h3>
+											<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
+											<div class="product-btns">
+												<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>
+													View detail
+												</button>
+											</div>
 										</div>
-									</div>
+									</a>
 								</div>
 							</div>
+							
 							<!-- /Product Single -->
 
 							<!-- Product Single -->
 							<div class="col-md-3 col-sm-6 col-xs-6">
 								<div class="product product-single">
-									<div class="product-thumb">
-										<img src="<?php echo e(url('assets/front_end/vidvie-plugin/img/single-product.jpg')); ?>" alt="">
-									</div>
-									<div class="product-body">
-										<h3 class="product-price">$32.50</h3>
-										<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-										<div class="product-btns">
-											<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>
-												View detail</button>
+									<a href="{{url('product_details')}}">
+										<div class="product-thumb">
+											<div class="product-label">
+												<span>New</span>
+											</div>
+											<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
 										</div>
-									</div>
+										<div class="product-body">
+											<h3 class="product-price">$32.50</h3>
+											<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
+											<div class="product-btns">
+												<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>
+													View detail
+												</button>
+											</div>
+										</div>
+									</a>
 								</div>
 							</div>
 							<!-- /Product Single -->
@@ -111,22 +119,23 @@
 							<!-- Product Single -->
 							<div class="col-md-3 col-sm-6 col-xs-6">
 								<div class="product product-single">
-									<div class="product-thumb">
-										<div class="product-label">
-											<span>New</span>
-											<span class="sale">-20%</span>
+									<a href="{{url('product_details')}}">
+										<div class="product-thumb">
+											<div class="product-label">
+												<span>New</span>
+											</div>
+											<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
 										</div>
-										<img src="<?php echo e(url('assets/front_end/vidvie-plugin/img/single-product.jpg')); ?>" alt="">
-									</div>
-									<div class="product-body">
-										<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del>
-										</h3>
-										<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-										<div class="product-btns">
-											<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>
-												View detail</button>
+										<div class="product-body">
+											<h3 class="product-price">$32.50</h3>
+											<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
+											<div class="product-btns">
+												<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>
+													View detail
+												</button>
+											</div>
 										</div>
-									</div>
+									</a>
 								</div>
 							</div>
 							<!-- /Product Single -->
@@ -136,12 +145,12 @@
 							<!-- Product Single -->
 							<div class="col-md-3 col-sm-6 col-xs-6">
 								<div class="product product-single">
-									<a href="<?php echo e(url('product_details')); ?>">
+									<a href="{{url('product_details')}}">
 										<div class="product-thumb">
 											<div class="product-label">
 												<span>New</span>
 											</div>
-											<img src="<?php echo e(url('assets/front_end/vidvie-plugin/img/single-product.jpg')); ?>" alt="">
+											<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
 										</div>
 										<div class="product-body">
 											<h3 class="product-price">$32.50</h3>
@@ -166,7 +175,7 @@
 										<div class="product-label">
 											<span>New</span>
 										</div>
-										<img src="<?php echo e(url('assets/front_end/vidvie-plugin/img/single-product.jpg')); ?>" alt="">
+										<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
 									</div>
 									<div class="product-body">
 										<h3 class="product-price">$32.50</h3>
@@ -188,7 +197,7 @@
 											<span>New</span>
 											<span class="sale">-20%</span>
 										</div>
-										<img src="<?php echo e(url('assets/front_end/vidvie-plugin/img/single-product.jpg')); ?>" alt="">
+										<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
 									</div>
 									<div class="product-body">
 										<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del>
@@ -213,7 +222,7 @@
 											<span>New</span>
 											<span class="sale">-20%</span>
 										</div>
-										<img src="<?php echo e(url('assets/front_end/vidvie-plugin/img/single-product.jpg')); ?>" alt="">
+										<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
 									</div>
 									<div class="product-body">
 										<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del>
@@ -232,7 +241,7 @@
 							<div class="col-md-3 col-sm-6 col-xs-6">
 								<div class="product product-single">
 									<div class="product-thumb">
-										<img src="<?php echo e(url('assets/front_end/vidvie-plugin/img/single-product.jpg')); ?>" alt="">
+										<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
 									</div>
 									<div class="product-body">
 										<h3 class="product-price">$32.50</h3>
@@ -255,7 +264,7 @@
 										<div class="product-label">
 											<span class="sale">-20%</span>
 										</div>
-										<img src="<?php echo e(url('assets/front_end/vidvie-plugin/img/single-product.jpg')); ?>" alt="">
+										<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
 									</div>
 									<div class="product-body">
 										<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del>
@@ -278,7 +287,7 @@
 											<span>New</span>
 											<span class="sale">-20%</span>
 										</div>
-										<img src="<?php echo e(url('assets/front_end/vidvie-plugin/img/single-product.jpg')); ?>" alt="">
+										<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
 									</div>
 									<div class="product-body">
 										<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del>
@@ -303,7 +312,7 @@
 											<span>New</span>
 											<span class="sale">-20%</span>
 										</div>
-										<img src="<?php echo e(url('assets/front_end/vidvie-plugin/img/single-product.jpg')); ?>" alt="">
+										<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
 									</div>
 									<div class="product-body">
 										<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del>
@@ -322,7 +331,7 @@
 							<div class="col-md-3 col-sm-6 col-xs-6">
 								<div class="product product-single">
 									<div class="product-thumb">
-										<img src="<?php echo e(url('assets/front_end/vidvie-plugin/img/single-product.jpg')); ?>" alt="">
+										<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
 									</div>
 									<div class="product-body">
 										<h3 class="product-price">$32.50</h3>
@@ -343,7 +352,7 @@
 											<span>New</span>
 											<span class="sale">-20%</span>
 										</div>
-										<img src="<?php echo e(url('assets/front_end/vidvie-plugin/img/single-product.jpg')); ?>" alt="">
+										<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
 									</div>
 									<div class="product-body">
 										<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del>
@@ -368,7 +377,7 @@
 											<span>New</span>
 											<span class="sale">-20%</span>
 										</div>
-										<img src="<?php echo e(url('assets/front_end/vidvie-plugin/img/single-product.jpg')); ?>" alt="">
+										<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
 									</div>
 									<div class="product-body">
 										<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del>
@@ -387,7 +396,7 @@
 							<div class="col-md-3 col-sm-6 col-xs-6">
 								<div class="product product-single">
 									<div class="product-thumb">
-										<img src="<?php echo e(url('assets/front_end/vidvie-plugin/img/single-product.jpg')); ?>" alt="">
+										<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
 									</div>
 									<div class="product-body">
 										<h3 class="product-price">$32.50</h3>
@@ -404,7 +413,7 @@
 							<div class="col-md-3 col-sm-6 col-xs-6">
 								<div class="product product-single">
 									<div class="product-thumb">
-										<img src="<?php echo e(url('assets/front_end/vidvie-plugin/img/single-product.jpg')); ?>" alt="">
+										<img src="{{url('assets/front_end/vidvie-plugin/img/single-product.jpg')}}" alt="">
 									</div>
 									<div class="product-body">
 										<h3 class="product-price">$32.50</h3>
@@ -463,6 +472,4 @@
 	</div>
 	<!-- /section -->
 
-<?php $__env->stopSection(); ?>
-
-<?php echo $__env->make('Client.common.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+@endsection
